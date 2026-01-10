@@ -1,0 +1,8 @@
+
+syntax = "proto3";
+
+package admin;
+
+message ClientMsg {
+    int32 id = 1;
+}

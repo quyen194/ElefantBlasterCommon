@@ -1,0 +1,12 @@
+[
+    {
+        "input": [
+            "proto_files/admin/client_msg.proto",
+            "proto_files/admin/server_msg.proto"
+        ],
+        "cache": "proto_files/admin/.cache.json",
+        "output": [
+            "src/network/shared/admin_protocols"
+        ]
+    }
+]
