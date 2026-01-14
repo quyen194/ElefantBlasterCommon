@@ -1,0 +1,9 @@
+import "server_auth.proto";
+
+package protocol;
+
+message ServerMessage {
+  oneof body {
+    admin_auth.LoginRes login_res = 1;
+  }
+}

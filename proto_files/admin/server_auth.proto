@@ -1,0 +1,9 @@
+
+syntax = "proto3";
+
+package admin_auth;
+
+message LoginRes {
+    int32 result = 1;
+    string reason = 2;
+}

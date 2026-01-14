@@ -90,7 +90,7 @@ FetchContent_Declare(
     SOURCE_DIR ${CMAKE_SOURCE_DIR}/libs/protobuf
 )
 FetchContent_MakeAvailable(protobuf)
-target_link_libraries(${PROJECT_NAME} PRIVATE protobuf::libprotobuf)
+target_link_libraries(${PROJECT_NAME} PUBLIC protobuf::libprotobuf)
 
 # aries_base (Common base library)
 target_link_libraries(${PROJECT_NAME} PRIVATE aries_base)

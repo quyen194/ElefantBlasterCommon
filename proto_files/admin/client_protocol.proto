@@ -1,0 +1,9 @@
+import "client_auth.proto";
+
+package protocol;
+
+message ClientMessage {
+  oneof body {
+    admin_auth.LoginReq login_req = 1;
+  }
+}
