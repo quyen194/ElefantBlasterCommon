@@ -2,8 +2,10 @@
     {
         "input": [
             "proto_files/admin/client_auth.proto",
+            "proto_files/admin/client_control.proto",
             "proto_files/admin/client_protocol.proto",
             "proto_files/admin/server_auth.proto",
+            "proto_files/admin/server_control.proto",
             "proto_files/admin/server_protocol.proto"
         ],
         "cache": "proto_files/admin/.cache.json",

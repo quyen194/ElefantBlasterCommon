@@ -1,9 +1,15 @@
 import "client_auth.proto";
+import "client_control.proto";
 
 package protocol;
 
 message ClientMessage {
   oneof body {
-    admin_auth.LoginReq login_req = 1;
+    admin_auth.LoginRequest login_request = 1;
+    server_control.ShutdownServerRequest shutdown_server_request = 2;
+    server_control.RestartServerRequest restart_server_request = 3;
+    server_control.ActiveGameServerRequest active_game_server_request = 4;
+    server_control.DeactiveGameServerRequest deactive_game_server_request = 5;
+    server_control.DisconnectAllGameClientsRequest disconnect_all_game_clients_request = 6;
   }
 }

@@ -1,0 +1,29 @@
+
+syntax = "proto3";
+
+package server_control;
+
+message ShutdownServerResponse {
+    int32 result = 1;
+    string reason = 2;
+}
+
+message RestartServerResponse {
+    int32 result = 1;
+    string reason = 2;
+}
+
+message ActiveGameServerResponse {
+    int32 result = 1;
+    string reason = 2;
+}
+
+message DeactiveGameServerResponse {
+    int32 result = 1;
+    string reason = 2;
+}
+
+message DisconnectAllGameClientsResponse {
+    int32 result = 1;
+    string reason = 2;
+}

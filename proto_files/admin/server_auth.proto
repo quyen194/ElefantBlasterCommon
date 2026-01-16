@@ -3,7 +3,7 @@ syntax = "proto3";
 
 package admin_auth;
 
-message LoginRes {
+message LoginResponse {
     int32 result = 1;
     string reason = 2;
 }
