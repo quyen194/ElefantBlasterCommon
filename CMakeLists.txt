@@ -1,4 +1,4 @@
-# CMakeList.txt : CMake project for ElefantBlasterProtocols.
+# CMakeList.txt : CMake project for ElefantBlasterCommon.
 # Include source and define project specific logic here.
 #
 cmake_minimum_required (VERSION 3.20)
@@ -12,7 +12,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}" CACHE INTERNAL "")
 
 # Declare the project
-project ("ElefantBlasterProtocols" LANGUAGES C CXX)
+project ("ElefantBlasterCommon" LANGUAGES C CXX)
 
 if(MSVC)
     if(NOT CMAKE_GENERATOR STREQUAL "Ninja")

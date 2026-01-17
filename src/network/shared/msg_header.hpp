@@ -6,15 +6,15 @@
   email:     quyen19492@gmail.com
 
   created:   2026/01/07 19:48
-  filename:  ElefantBlaster/ElefantBlasterProtocols/network/shared/msg_header.hpp
+  filename:  ElefantBlaster/ElefantBlasterCommon/network/shared/msg_header.hpp
 
   purpose:   Message header definition
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_PROTOCOLS_NETWORK_SHARED_MSG_HEADER_HPP
-#define ELEFANT_BLASTER_PROTOCOLS_NETWORK_SHARED_MSG_HEADER_HPP
+#ifndef ELEFANT_BLASTER_COMMON_NETWORK_SHARED_MSG_HEADER_HPP
+#define ELEFANT_BLASTER_COMMON_NETWORK_SHARED_MSG_HEADER_HPP
 // -----------------------------------------------------------------------------
 
 
@@ -57,5 +57,5 @@ struct MessageHeader {
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_PROTOCOLS_NETWORK_SHARED_MSG_HEADER_HPP
+#endif  // ELEFANT_BLASTER_COMMON_NETWORK_SHARED_MSG_HEADER_HPP
 // -----------------------------------------------------------------------------

@@ -6,15 +6,15 @@
   email:     quyen19492@gmail.com
 
   created:   2026/01/07 16:13
-  filename:  ElefantBlaster/ElefantBlasterProtocols/network/shared/msg_manager.hpp
+  filename:  ElefantBlaster/ElefantBlasterCommon/network/shared/msg_manager.hpp
 
   purpose:   Message manager for handling message buffers
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_PROTOCOLS_NETWORK_SHARED_MSG_MANAGER_HPP
-#define ELEFANT_BLASTER_PROTOCOLS_NETWORK_SHARED_MSG_MANAGER_HPP
+#ifndef ELEFANT_BLASTER_COMMON_NETWORK_SHARED_MSG_MANAGER_HPP
+#define ELEFANT_BLASTER_COMMON_NETWORK_SHARED_MSG_MANAGER_HPP
 // -----------------------------------------------------------------------------
 
 
@@ -245,5 +245,5 @@ class MessageManager {
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_PROTOCOLS_NETWORK_SHARED_MSG_MANAGER_HPP
+#endif  // ELEFANT_BLASTER_COMMON_NETWORK_SHARED_MSG_MANAGER_HPP
 // -----------------------------------------------------------------------------
