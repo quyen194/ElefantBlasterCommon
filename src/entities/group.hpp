@@ -5,50 +5,34 @@
   author:    quyen19492
   email:     quyen19492@gmail.com
 
-  created:   2026/01/16 15:28
-  filename:  ElefantBlaster/ElefantBlasterCommon/entities/permission.hpp
+  created:   2026/01/18 07:54
+  filename:  ElefantBlaster/ElefantBlasterCommon/entities/group.hpp
 
-  purpose:   Header file for permission entity
+  purpose:   Header file for group entity
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
-#define ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_GROUP_HPP
+#define ELEFANT_BLASTER_COMMON_ENTITIES_GROUP_HPP
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-#include <array>
-#include <cstdint>
 #include <string>
-#include <string_view>
-
-#include "entities/permission_name.hpp"
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-namespace _RiskLevel {
-  enum T {
-    kUnknown,
-    Low,
-    Medium,
-    High,
-  };
-}
-typedef _RiskLevel::T RiskLevel;
-// -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-
-struct Permission {
-  RiskLevel risk;
-  std::string_view name;
-  std::string_view desc;
+struct Group {
+  bool is_system;
+  std::string name;
+  std::string display_name;
+  std::string desc;
 };
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_GROUP_HPP
 // -----------------------------------------------------------------------------

@@ -5,50 +5,34 @@
   author:    quyen19492
   email:     quyen19492@gmail.com
 
-  created:   2026/01/16 15:28
-  filename:  ElefantBlaster/ElefantBlasterCommon/entities/permission.hpp
+  created:   2026/01/18 06:00
+  filename:  ElefantBlaster/ElefantBlasterCommon/entities/role.hpp
 
-  purpose:   Header file for permission entity
+  purpose:
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
-#define ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_ROLE_HPP
+#define ELEFANT_BLASTER_COMMON_ENTITIES_ROLE_HPP
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-#include <array>
-#include <cstdint>
 #include <string>
-#include <string_view>
-
-#include "entities/permission_name.hpp"
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-namespace _RiskLevel {
-  enum T {
-    kUnknown,
-    Low,
-    Medium,
-    High,
-  };
-}
-typedef _RiskLevel::T RiskLevel;
-// -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-
-struct Permission {
-  RiskLevel risk;
-  std::string_view name;
-  std::string_view desc;
+struct Role {
+  bool is_system;
+  std::string name;
+  std::string display_name;
+  std::string desc;
 };
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_ROLE_HPP
 // -----------------------------------------------------------------------------

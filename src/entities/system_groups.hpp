@@ -5,50 +5,35 @@
   author:    quyen19492
   email:     quyen19492@gmail.com
 
-  created:   2026/01/16 15:28
-  filename:  ElefantBlaster/ElefantBlasterCommon/entities/permission.hpp
+  created:   2026/01/18 09:37
+  filename:  ElefantBlaster/ElefantBlasterCommon/entities/system_groups.hpp
 
-  purpose:   Header file for permission entity
+  purpose:   Header file for system groups
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
-#define ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_SYSTEM_GROUPS_HPP
+#define ELEFANT_BLASTER_COMMON_ENTITIES_SYSTEM_GROUPS_HPP
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-#include <array>
-#include <cstdint>
-#include <string>
 #include <string_view>
-
-#include "entities/permission_name.hpp"
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-namespace _RiskLevel {
-  enum T {
-    kUnknown,
-    Low,
-    Medium,
-    High,
-  };
-}
-typedef _RiskLevel::T RiskLevel;
+namespace system {
+namespace group {
+  inline constexpr std::string_view server_admins = "system.server_admins";
+  inline constexpr std::string_view game_admins = "system.game_admins";
+  inline constexpr std::string_view players = "system.players";
+  inline constexpr std::string_view guests = "system.guests";
+} // namespace role
+} // namespace system
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-
-struct Permission {
-  RiskLevel risk;
-  std::string_view name;
-  std::string_view desc;
-};
-// -----------------------------------------------------------------------------
-
-// -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_SYSTEM_GROUPS_HPP
 // -----------------------------------------------------------------------------

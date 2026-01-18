@@ -5,50 +5,52 @@
   author:    quyen19492
   email:     quyen19492@gmail.com
 
-  created:   2026/01/16 15:28
-  filename:  ElefantBlaster/ElefantBlasterCommon/entities/permission.hpp
+  created:   2026/01/18 06:33
+  filename:  ElefantBlaster/ElefantBlasterCommon/entities/user.hpp
 
-  purpose:   Header file for permission entity
+  purpose:   Header file for user entity
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
-#define ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_USER_HPP
+#define ELEFANT_BLASTER_COMMON_ENTITIES_USER_HPP
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-#include <array>
 #include <cstdint>
 #include <string>
-#include <string_view>
-
-#include "entities/permission_name.hpp"
+#include <time.h>
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-namespace _RiskLevel {
+namespace _UserType {
   enum T {
     kUnknown,
-    Low,
-    Medium,
-    High,
+    kAdmin,
+    kPlayer,
   };
 }
-typedef _RiskLevel::T RiskLevel;
+typedef _UserType::T UserType;
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
 
-struct Permission {
-  RiskLevel risk;
-  std::string_view name;
-  std::string_view desc;
+struct User {
+  UserType type;
+  std::string username;
+  std::string password;
+  std::string password_hash;
+  std::string display_name;
+  std::string api_token;
+  bool is_banned;
+  std::string ban_reason;
+  time_t banned_until;
 };
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_HPP
+#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_USER_HPP
 // -----------------------------------------------------------------------------

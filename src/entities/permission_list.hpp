@@ -1,0 +1,232 @@
+/********************************************************************
+  Copyright 2026, Cong Quyen Knight. All rights reserved
+
+  project:   Aries Games: Elefant Blaster
+  author:    quyen19492
+  email:     quyen19492@gmail.com
+
+  created:   2026/01/16 15:28
+  filename:  ElefantBlaster/ElefantBlasterCommon/entities/permission_list.hpp
+
+  purpose:   Header file for permission list
+*********************************************************************/
+
+
+// -----------------------------------------------------------------------------
+#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_LIST_HPP
+#define ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_LIST_HPP
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+#include <array>
+#include <string_view>
+
+#include "entities/permission.hpp"
+#include "entities/permission_name.hpp"
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+
+inline constexpr std::array kPermissions = {
+  Permission{ RiskLevel::High, permission::self::all,
+              "All permission permissions (FULL ACCESS)" },
+
+  Permission{ RiskLevel::High, permission::self::update_risk,
+              "Update permission risk level" },
+
+  Permission{ RiskLevel::High, permission::self::view_high_risk,
+              "View high risk permissions" },
+
+  Permission{ RiskLevel::Medium, permission::self::view_medium_risk,
+              "View medium risk permissions" },
+
+  Permission{ RiskLevel::Low, permission::self::view_low_risk,
+              "View low risk permissions" },
+
+  Permission{ RiskLevel::High, permission::admin::all,
+              "All admin permissions (FULL ACCESS)" },
+
+  Permission{ RiskLevel::High, permission::user::all,
+              "All user permissions (FULL ACCESS)" },
+
+  Permission{ RiskLevel::High, permission::role::all,
+              "All role permissions (FULL ACCESS)" },
+
+  Permission{ RiskLevel::High, permission::server::app::all,
+              "Full server application control (CRITICAL)" },
+
+  Permission{ RiskLevel::High, permission::server::app::shutdown,
+              "Shutdown the server application (CRITICAL)" },
+
+  Permission{ RiskLevel::High, permission::server::app::restart,
+              "Restart the server application (CRITICAL)" },
+
+  Permission{ RiskLevel::High, permission::match::update_as_god,
+              "Force update match state (GOD MODE)" },
+
+  Permission{ RiskLevel::High, permission::server::game::disconnect_all,
+              "Disconnect all game clients" },
+
+  Permission{ RiskLevel::Medium, permission::admin::create,
+              "Create a new admin account" },
+
+  Permission{ RiskLevel::Medium, permission::admin::del,
+              "Delete an admin account" },
+
+  Permission{ RiskLevel::Medium, permission::admin::update,
+              "Update admin account information" },
+
+  Permission{ RiskLevel::Medium, permission::user::ban,
+              "Ban a user account" },
+
+  Permission{ RiskLevel::Medium, permission::user::unban,
+              "Unban a user account" },
+
+  Permission{ RiskLevel::Medium, permission::user::reset_password,
+              "Reset user password" },
+
+  Permission{ RiskLevel::Medium, permission::usergroup::assign_role,
+              "Assign role to a usergroup" },
+
+  Permission{ RiskLevel::Medium, permission::role::add_permission,
+              "Add permission to a role" },
+
+  Permission{ RiskLevel::Medium, permission::role::remove_permission,
+              "Remove permission from a role" },
+
+  Permission{ RiskLevel::Medium, permission::server::game::maintenance,
+              "Put game server into maintenance mode" },
+
+  Permission{ RiskLevel::Medium, permission::server::game::disconnect_one,
+              "Disconnect a single game client" },
+
+  Permission{ RiskLevel::Medium, permission::match::kick_member,
+              "Kick a player from a match" },
+
+  Permission{ RiskLevel::Medium, permission::map::approve,
+              "Approve a custom map" },
+
+  Permission{ RiskLevel::Medium, permission::map::make_official,
+              "Mark a map as official" },
+
+  Permission{ RiskLevel::Low, permission::admin::view,
+              "View admin list" },
+
+  Permission{ RiskLevel::Low, permission::usergroup::all,
+              "All usergroup permissions" },
+
+  Permission{ RiskLevel::Low, permission::usergroup::create,
+              "Create a usergroup" },
+
+  Permission{ RiskLevel::Low, permission::usergroup::del,
+              "Delete a usergroup" },
+
+  Permission{ RiskLevel::Low, permission::usergroup::view,
+              "View usergroup list" },
+
+  Permission{ RiskLevel::Low, permission::usergroup::add_user,
+              "Add user to a usergroup" },
+
+  Permission{ RiskLevel::Low, permission::usergroup::remove_user,
+              "Remove user from a usergroup" },
+
+  Permission{ RiskLevel::Low, permission::user::create,
+              "Create a user account" },
+
+  Permission{ RiskLevel::Low, permission::user::del,
+              "Delete a user account" },
+
+  Permission{ RiskLevel::Low, permission::user::view,
+              "View user information" },
+
+  Permission{ RiskLevel::Low, permission::user::update,
+              "Update user information" },
+
+  Permission{ RiskLevel::Low, permission::user::assign_role,
+              "Assign role to a user" },
+
+  Permission{ RiskLevel::Low, permission::role::create,
+              "Create a role" },
+
+  Permission{ RiskLevel::Low, permission::role::del,
+              "Delete a role" },
+
+  Permission{ RiskLevel::Low, permission::role::view,
+              "View role list" },
+
+  Permission{ RiskLevel::Low, permission::role::update,
+              "Update role information" },
+
+  Permission{ RiskLevel::Low, permission::server::admin::all,
+              "All server admin permissions" },
+
+  Permission{ RiskLevel::Low, permission::server::admin::view_logs,
+              "View server admin logs" },
+
+  Permission{ RiskLevel::Low, permission::server::game::all,
+              "All game server permissions" },
+
+  Permission{ RiskLevel::Low, permission::server::game::activate,
+              "Activate game server" },
+
+  Permission{ RiskLevel::Low, permission::server::game::deactivate,
+              "Deactivate game server" },
+
+  Permission{ RiskLevel::Low, permission::server::game::view_logs,
+              "View game server logs" },
+
+  Permission{ RiskLevel::Low, permission::match::all,
+              "All match permissions" },
+
+  Permission{ RiskLevel::Low, permission::match::create,
+              "Create a match" },
+
+  Permission{ RiskLevel::Low, permission::match::update,
+              "Update match settings" },
+
+  Permission{ RiskLevel::Low, permission::match::start,
+              "Start a match" },
+
+  Permission{ RiskLevel::Low, permission::match::restart,
+              "Restart a match" },
+
+  Permission{ RiskLevel::Low, permission::match::pause,
+              "Pause a match" },
+
+  Permission{ RiskLevel::Low, permission::match::resume,
+              "Resume a match" },
+
+  Permission{ RiskLevel::Low, permission::match::add_member,
+              "Add player to a match" },
+
+  Permission{ RiskLevel::Low, permission::match::replay,
+              "Replay a match" },
+
+  Permission{ RiskLevel::Low, permission::map::all,
+              "All map permissions" },
+
+  Permission{ RiskLevel::Low, permission::map::create,
+              "Create a map" },
+
+  Permission{ RiskLevel::Low, permission::map::del,
+              "Delete a map" },
+
+  Permission{ RiskLevel::Low, permission::map::view,
+              "View map list" },
+
+  Permission{ RiskLevel::Low, permission::map::update,
+              "Update map information" },
+
+  Permission{ RiskLevel::Low, permission::map::file_export,
+              "Export map file" },
+
+  Permission{ RiskLevel::Low, permission::map::file_import,
+              "Import map file" },
+};
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_PERMISSION_LIST_HPP
+// -----------------------------------------------------------------------------
