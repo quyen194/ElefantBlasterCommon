@@ -24,7 +24,7 @@
 
 
 // -----------------------------------------------------------------------------
-namespace system {
+namespace game_system {
 namespace role {
   inline constexpr std::string_view super_admin = "system.super_admin";
   inline constexpr std::string_view server_admin = "system.server_admin";
@@ -33,7 +33,7 @@ namespace role {
   inline constexpr std::string_view guest = "system.guest";
   inline constexpr std::string_view match_owner = "system.match_owner";
 } // namespace role
-} // namespace system
+} // namespace game_system
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------

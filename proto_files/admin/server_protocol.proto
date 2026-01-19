@@ -5,11 +5,14 @@ package protocol;
 
 message ServerMessage {
   oneof body {
-    admin_auth.LoginResponse login_response = 1;
-    server_control.ShutdownServerResponse shutdown_server_response = 2;
-    server_control.RestartServerResponse restart_server_response = 3;
-    server_control.ActiveGameServerResponse active_game_server_response = 4;
-    server_control.DeactiveGameServerResponse deactive_game_server_response = 5;
-    server_control.DisconnectAllGameClientsResponse disconnect_all_game_clients_response = 6;
+    server_control.ShutdownServerResponse shutdown_server_response = 1;
+    server_control.RestartServerResponse restart_server_response = 2;
+
+    server_control.ActiveGameServerResponse active_game_server_response = 11;
+    server_control.DeactiveGameServerResponse deactive_game_server_response = 12;
+    server_control.DisconnectAllGameClientsResponse disconnect_all_game_clients_response = 13;
+
+    admin_auth.LoginSuccessResponse login_success_response = 101;
+    admin_auth.LoginFailureResponse login_failure_response = 102;
   }
 }

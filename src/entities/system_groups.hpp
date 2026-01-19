@@ -24,14 +24,14 @@
 
 
 // -----------------------------------------------------------------------------
-namespace system {
+namespace game_system {
 namespace group {
   inline constexpr std::string_view server_admins = "system.server_admins";
   inline constexpr std::string_view game_admins = "system.game_admins";
   inline constexpr std::string_view players = "system.players";
   inline constexpr std::string_view guests = "system.guests";
 } // namespace role
-} // namespace system
+} // namespace game_system
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------

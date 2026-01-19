@@ -30,6 +30,7 @@ struct Role {
   std::string name;
   std::string display_name;
   std::string desc;
+  bool is_actived;
 };
 // -----------------------------------------------------------------------------
 

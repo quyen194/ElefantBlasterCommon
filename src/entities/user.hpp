@@ -42,12 +42,12 @@ struct User {
   UserType type;
   std::string username;
   std::string password;
-  std::string password_hash;
   std::string display_name;
   std::string api_token;
   bool is_banned;
   std::string ban_reason;
   time_t banned_until;
+  bool is_actived;
 };
 // -----------------------------------------------------------------------------
 
