@@ -20,6 +20,8 @@
 
 // -----------------------------------------------------------------------------
 #include <array>
+#include <set>
+#include <string>
 #include <string_view>
 
 #include "entities/permission.hpp"
@@ -225,6 +227,12 @@ inline constexpr std::array kPermissions = {
   Permission{ RiskLevel::Low, permission::map::file_import,
               "Import map file" },
 };
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+Permission GetPermission(const std::string_view& name);
+bool HasPermission(const std::set<std::string> permissions,
+                   const std::string_view permission);
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------

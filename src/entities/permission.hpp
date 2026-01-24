@@ -19,9 +19,6 @@
 
 
 // -----------------------------------------------------------------------------
-#include <array>
-#include <cstdint>
-#include <string>
 #include <string_view>
 
 #include "entities/permission_name.hpp"
@@ -43,7 +40,7 @@ typedef _RiskLevel::T RiskLevel;
 // -----------------------------------------------------------------------------
 
 struct Permission {
-  RiskLevel risk;
+  RiskLevel risk = RiskLevel::kUnknown;
   std::string_view name;
   std::string_view desc;
 };

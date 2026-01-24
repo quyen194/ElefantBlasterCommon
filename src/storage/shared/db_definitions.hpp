@@ -5,35 +5,36 @@
   author:    quyen19492
   email:     quyen19492@gmail.com
 
-  created:   2026/01/18 09:37
-  filename:  ElefantBlaster/ElefantBlasterCommon/entities/system_groups.hpp
+  created:   2026/01/21 05:18
+  filename:  ElefantBlaster/ElefantBlasterCommon/storage/shared/db_definitions.hpp
 
-  purpose:   Header file for system groups
+  purpose:   Common definitions for database
 *********************************************************************/
 
 
 // -----------------------------------------------------------------------------
-#ifndef ELEFANT_BLASTER_COMMON_ENTITIES_SYSTEM_GROUPS_HPP
-#define ELEFANT_BLASTER_COMMON_ENTITIES_SYSTEM_GROUPS_HPP
+#ifndef ELEFANT_BLASTER_COMMON_STORAGE_SHARED_DB_DEFINITIONS_HPP
+#define ELEFANT_BLASTER_COMMON_STORAGE_SHARED_DB_DEFINITIONS_HPP
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-#include <string_view>
+#include <cstdint>
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-namespace game_system {
-namespace group {
-  inline constexpr std::string_view server_admins = "system.server_admins";
-  inline constexpr std::string_view game_admins = "system.game_admins";
-  inline constexpr std::string_view players = "system.players";
-  inline constexpr std::string_view guests = "system.guests";
-} // namespace group
-} // namespace game_system
+
+namespace _SortBy {
+  enum T : uint32_t {
+    kNone,
+    kAsc,
+    kDesc,
+  };
+}
+typedef _SortBy::T SortBy;
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-#endif  // ELEFANT_BLASTER_COMMON_ENTITIES_SYSTEM_GROUPS_HPP
+#endif  // ELEFANT_BLASTER_COMMON_STORAGE_SHARED_DB_DEFINITIONS_HPP
 // -----------------------------------------------------------------------------

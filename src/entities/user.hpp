@@ -21,9 +21,16 @@
 // -----------------------------------------------------------------------------
 #include <cstdint>
 #include <string>
+#include <map>
 #include <time.h>
+
+#include <aries_base/utils/get_default.hpp>
 // -----------------------------------------------------------------------------
 
+
+// -----------------------------------------------------------------------------
+using namespace aries_base;
+// -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
 namespace _UserType {
@@ -35,19 +42,31 @@ namespace _UserType {
 }
 typedef _UserType::T UserType;
 // -----------------------------------------------------------------------------
+inline const std::string ToString(const UserType e) {
+  static const std::map<UserType, std::string> kMap = {
+      {UserType::kUnknown, "Unknown"},
+      {UserType::kAdmin, "Admin"},
+      {UserType::kPlayer, "Player"},
+  };
+
+  return utils::GetDefault(kMap, e, std::string("Unknown"));
+}
+// -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
 
 struct User {
-  UserType type;
+  std::uint64_t id = 0;
+  UserType type = UserType::kUnknown;
   std::string username;
   std::string password;
   std::string display_name;
   std::string api_token;
-  bool is_banned;
+  time_t last_online_at = 0;
+  bool is_banned = false;
   std::string ban_reason;
-  time_t banned_until;
-  bool is_actived;
+  time_t banned_until = 0;
+  bool is_actived = false;
 };
 // -----------------------------------------------------------------------------
 

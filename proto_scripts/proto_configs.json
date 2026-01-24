@@ -1,12 +1,10 @@
 [
     {
         "input": [
-            "proto_files/admin/client_auth.proto",
-            "proto_files/admin/client_control.proto",
-            "proto_files/admin/client_protocol.proto",
-            "proto_files/admin/server_auth.proto",
-            "proto_files/admin/server_control.proto",
-            "proto_files/admin/server_protocol.proto"
+            "proto_files/admin/auth.proto",
+            "proto_files/admin/control.proto",
+            "proto_files/admin/protocol.proto",
+            "proto_files/admin/users_management.proto"
         ],
         "cache": "proto_files/admin/.cache.json",
         "output": [

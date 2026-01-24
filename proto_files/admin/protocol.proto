@@ -1,0 +1,37 @@
+import "auth.proto";
+import "control.proto";
+import "users_management.proto";
+
+package protocol;
+
+message ClientMessage {
+  oneof body {
+    server_control.ShutdownServerRequest shutdown_server_request = 1;
+    server_control.RestartServerRequest restart_server_request = 2;
+
+    server_control.ActiveGameServerRequest active_game_server_request = 11;
+    server_control.DeactiveGameServerRequest deactive_game_server_request = 12;
+    server_control.DisconnectAllGameClientsRequest disconnect_all_game_clients_request = 13;
+
+    admin_auth.LoginRequest login_request = 101;
+
+    users_management.UsersListRequest users_list_request = 201;
+  }
+}
+
+message ServerMessage {
+  oneof body {
+    server_control.ShutdownServerResponse shutdown_server_response = 1;
+    server_control.RestartServerResponse restart_server_response = 2;
+
+    server_control.ActiveGameServerResponse active_game_server_response = 11;
+    server_control.DeactiveGameServerResponse deactive_game_server_response = 12;
+    server_control.DisconnectAllGameClientsResponse disconnect_all_game_clients_response = 13;
+
+    admin_auth.LoginSuccessResponse login_success_response = 101;
+    admin_auth.LoginFailureResponse login_failure_response = 102;
+
+    users_management.UsersListSuccessResponse users_list_success_response = 201;
+    users_management.UsersListFailureResponse users_list_failure_response = 202;
+  }
+}

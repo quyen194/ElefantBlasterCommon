@@ -3,25 +3,35 @@ syntax = "proto3";
 
 package server_control;
 
+message ShutdownServerRequest {}
+
 message ShutdownServerResponse {
     int32 result = 1;
     string reason = 2;
 }
+
+message RestartServerRequest {}
 
 message RestartServerResponse {
     int32 result = 1;
     string reason = 2;
 }
 
+message ActiveGameServerRequest {}
+
 message ActiveGameServerResponse {
     int32 result = 1;
     string reason = 2;
 }
 
+message DeactiveGameServerRequest {}
+
 message DeactiveGameServerResponse {
     int32 result = 1;
     string reason = 2;
 }
+
+message DisconnectAllGameClientsRequest {}
 
 message DisconnectAllGameClientsResponse {
     int32 result = 1;

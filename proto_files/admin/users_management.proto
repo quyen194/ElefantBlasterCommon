@@ -1,0 +1,32 @@
+
+syntax = "proto3";
+
+package users_management;
+
+message UsersListRequest {
+    string filter_name = 1;
+    int32 sort_type = 2;
+    uint64 last_id = 3;
+    uint64 max_count = 4;
+}
+
+message UserData {
+    int64 id = 1;
+    int32 type = 2;
+    string username = 3;
+    string display_name = 4;
+    string api_token = 5;
+    int32 last_online_at = 6;
+    bool is_banned = 7;
+    string ban_reason = 8;
+    int32 banned_until = 9;
+    bool is_actived = 10;
+}
+
+message UsersListSuccessResponse {
+    repeated UserData users = 1;
+}
+
+message UsersListFailureResponse {
+    string reason = 1;
+}
