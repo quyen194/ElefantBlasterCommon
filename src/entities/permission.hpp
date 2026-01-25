@@ -29,12 +29,23 @@
 namespace _RiskLevel {
   enum T {
     kUnknown,
-    Low,
-    Medium,
-    High,
+    kLow,
+    kMedium,
+    kHigh,
   };
 }
 typedef _RiskLevel::T RiskLevel;
+// -----------------------------------------------------------------------------
+inline const std::string ToString(const RiskLevel e) {
+  static const std::map<RiskLevel, std::string> kMap = {
+      {RiskLevel::kUnknown, "Unknown"},
+      {RiskLevel::kLow, "Low"},
+      {RiskLevel::kMedium, "Medium"},
+      {RiskLevel::kHigh, "High"},
+  };
+
+  return utils::GetDefault(kMap, e, std::string("Unknown"));
+}
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
