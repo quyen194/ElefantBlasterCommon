@@ -20,11 +20,6 @@
 
 // -----------------------------------------------------------------------------
 
-Permission GetPermission(const std::string_view& name) {
-  return Permission();
- }
-// -----------------------------------------------------------------------------
-
 bool HasPermission(const std::set<std::string> permissions,
                    const std::string_view permission) {
   std::string to_verify_perm(permission);

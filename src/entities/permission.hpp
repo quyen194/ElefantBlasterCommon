@@ -19,11 +19,19 @@
 
 
 // -----------------------------------------------------------------------------
+#include <map>
+#include <string>
 #include <string_view>
+
+#include <aries_base/utils/get_default.hpp>
 
 #include "entities/permission_name.hpp"
 // -----------------------------------------------------------------------------
 
+
+// -----------------------------------------------------------------------------
+using namespace aries_base;
+// -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
 namespace _RiskLevel {
@@ -50,10 +58,19 @@ inline const std::string ToString(const RiskLevel e) {
 
 // -----------------------------------------------------------------------------
 
-struct Permission {
+struct DefPermission {
   RiskLevel risk = RiskLevel::kUnknown;
   std::string_view name;
   std::string_view desc;
+};
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+
+struct Permission {
+  RiskLevel risk = RiskLevel::kUnknown;
+  std::string name;
+  std::string desc;
 };
 // -----------------------------------------------------------------------------
 
