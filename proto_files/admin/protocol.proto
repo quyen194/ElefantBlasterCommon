@@ -16,6 +16,8 @@ message ClientMessage {
     admin_auth.LoginRequest login_request = 101;
 
     users_management.UsersListRequest users_list_request = 201;
+
+    users_management.PermissionsListRequest permissions_list_request = 231;
   }
 }
 
@@ -33,5 +35,8 @@ message ServerMessage {
 
     users_management.UsersListSuccessResponse users_list_success_response = 201;
     users_management.UsersListFailureResponse users_list_failure_response = 202;
+
+    users_management.PermissionsListSuccessResponse permissions_list_success_response = 231;
+    users_management.PermissionsListFailureResponse permissions_list_failure_response = 232;
   }
 }

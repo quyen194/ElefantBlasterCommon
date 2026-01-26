@@ -30,3 +30,19 @@ message UsersListSuccessResponse {
 message UsersListFailureResponse {
     string reason = 1;
 }
+
+message PermissionsListRequest {}
+
+message PermissionData {
+    int32 risk_level = 1;
+    string name = 2;
+    string desc = 3;
+}
+
+message PermissionsListSuccessResponse {
+    repeated PermissionData permissions = 1;
+}
+
+message PermissionsListFailureResponse {
+    string reason = 1;
+}
