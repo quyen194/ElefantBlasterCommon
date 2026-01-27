@@ -8,7 +8,7 @@
   created:   2026/01/18 06:00
   filename:  ElefantBlaster/ElefantBlasterCommon/entities/role.hpp
 
-  purpose:
+  purpose:   Header file for role entity
 *********************************************************************/
 
 

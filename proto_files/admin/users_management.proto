@@ -31,6 +31,25 @@ message UsersListFailureResponse {
     string reason = 1;
 }
 
+message RolesListRequest {}
+
+message RoleData {
+    int64 id = 1;
+    bool is_system = 2;
+    string name = 3;
+    string display_name = 4;
+    string desc = 5;
+    bool is_actived = 6;
+}
+
+message RolesListSuccessResponse {
+    repeated RoleData roles = 1;
+}
+
+message RolesListFailureResponse {
+    string reason = 1;
+}
+
 message PermissionsListRequest {}
 
 message PermissionData {
