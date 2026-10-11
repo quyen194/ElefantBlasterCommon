@@ -45,19 +45,21 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-file(GLOB_RECURSE SOURCE_FILES
-    "${CMAKE_CURRENT_LIST_DIR}/*.h"
-    "${CMAKE_CURRENT_LIST_DIR}/*.c"
-    "${CMAKE_CURRENT_LIST_DIR}/*.hpp"
-    "${CMAKE_CURRENT_LIST_DIR}/*.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/*.hh"
-    "${CMAKE_CURRENT_LIST_DIR}/*.cc"
+# Add your headers to the target
+file(GLOB_RECURSE HEADER_FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.hh"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp"
 )
+target_sources(${PROJECT_NAME} PUBLIC ${HEADER_FILES})
 
 # Add your sources to the target
-target_sources(${PROJECT_NAME} PRIVATE
-    ${SOURCE_FILES}
+file(GLOB_RECURSE SOURCE_FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
+target_sources(${PROJECT_NAME} PUBLIC ${SOURCE_FILES})
 
 # Set the runtime library to be dynamic on MSVC builds
 if (MSVC)
