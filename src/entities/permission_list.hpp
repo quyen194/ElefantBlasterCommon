@@ -295,7 +295,7 @@ inline constexpr std::array kPermissions = {
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-bool HasPermission(const std::set<std::string> permissions,
+bool HasPermission(const std::set<std::string>& permissions_list,
                    const std::string_view permission);
 // -----------------------------------------------------------------------------
 
