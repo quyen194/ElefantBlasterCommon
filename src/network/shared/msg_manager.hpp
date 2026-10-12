@@ -210,11 +210,11 @@ class MessageManager {
   }
 
   uint8_t head() {
-    return body()[0];
+    return data()[POS_HEAD_CODE];
   }
 
   uint8_t sub() {
-    return body()[1];
+    return data()[POS_SUB_CODE];
   }
 
   uint8_t *body() {
